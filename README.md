@@ -1,5 +1,4 @@
 # bett-qr-platform
-# Bett QR Questionnaire
 
 Este repositório contém o projeto desenvolvido para o evento Bett, cujo objetivo é automatizar o processo de check-in e coleta de respostas dos participantes através da leitura de QR Codes.
 
