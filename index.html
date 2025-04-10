@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Leitor de QR Code Bett</title>
+  <!-- Inclusão da biblioteca html5-qrcode via CDN -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+    }
+    #reader {
+      width: 300px;
+      margin: 20px auto;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Leitor de QR Code Bett</h1>
 
-Página principal de leitura do QR
+  <!-- Div para exibir o preview da câmera -->
+  <div id="reader"></div>
+
+  <!-- Botões para iniciar e parar a leitura -->
+  <button id="start">Iniciar Leitura</button>
+  <button id="stop">Parar Leitura</button>
+
+  <!-- Link para o arquivo JavaScript externo -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
