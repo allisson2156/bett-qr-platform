@@ -1,42 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <title>Leitor de QR Code Bett</title>
   <!-- Inclusão da biblioteca html5-qrcode via CDN -->
   <script src="https://unpkg.com/html5-qrcode"></script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      padding: 20px;
-      text-align: center;
-    }
-    #reader {
-      width: 300px;
-      margin: 20px auto;
-    }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+  <!-- Link para o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1>Leitor de QR Code Bett</h1>
+  <header>
+    <h1>Bett 2025</h1>
+  </header>
 
+  <h1 id="info-titulo">Escaneie o QR Code para começar</h1>
+ 
   <!-- Div para exibir o preview da câmera -->
-  <div id="reader"></div>
+  <div id="reader" style="width: 400px"></div>
 
-  <!-- Botões para iniciar e parar a leitura -->
-  <button id="start">Iniciar Leitura</button>
-  <button id="stop">Parar Leitura</button>
 
   <!-- Link para o arquivo JavaScript externo -->
   <script src="js/script.js"></script>
+
+  <!-- Texto informativo em tom de cinza -->
+  <p id="info-qr">
+    Suas respostas serão coletadas para análise posterior.
+  </p>
+
 </body>
 </html>
-
