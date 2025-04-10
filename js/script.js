@@ -1,0 +1,1 @@
+Código JS que usa html5-qrcode
