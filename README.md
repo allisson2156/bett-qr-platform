@@ -18,7 +18,7 @@ O projeto é composto por:
 
 ## Tecnologias Utilizadas
 
-- **Front-end**: HTML, JavaScript
+- **Front-end**: HTML, CSS, JavaScript
 - **Leitor de QR Code**: [html5-qrcode](https://github.com/mebjas/html5-qrcode)
 - **Questionário**: [Typeform](https://www.typeform.com/)
 - **Armazenamento das respostas**: Google Sheets
@@ -27,11 +27,14 @@ O projeto é composto por:
 ## Estrutura do Projeto
 
 ```
-bett-qr-questionnaire/
+bett-qr-plataform/
 │
 ├── index.html                # Página inicial com leitura do QR Code
-├── script.js                 # Lógica de leitura e redirecionamento
-├── styles.css                # Estilos básicos da interface
+├── js               
+  ├── script.js                 # Lógica de leitura e redirecionamento
+├── css
+  ├── styles.css                # Estilos básicos da interface
+├── assets               # imagens e outras mídias (caso necessário)
 └── README.md                 # Documentação do projeto
 ```
 
