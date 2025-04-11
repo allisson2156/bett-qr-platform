@@ -8,8 +8,8 @@
 /* Corpo da página */
 body {
   font-family: Arial, sans-serif;
-  background-color: #0F172A; /* Azul-escuro (Tailwind-ish) */
-  color: #FFFFFF;
+  background-color: #0F172A;
+  color: #fdfdfd; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -17,27 +17,27 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: #3B82F6; /* Azul intermediário */
+  background-color: #3B82F6;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
   font-size: 2em;
-  color: #FFFFFF;
+  color: #fdfdfd; 
 }
 
 
 main h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
-  color: #C7D2FE; /* Tom de azul-claro */
+  color: #C7D2FE; 
 }
 
 #info-titulo{
     text-align: center;
     margin-top: 10px;
-    color: #FFFFFF; /* Texto branco */
+    color: #fdfdfd; 
   }
 
 #reader {
@@ -45,7 +45,7 @@ main h2 {
     margin: 0 auto;
     position: relative;
     margin-top: 40px;
-    border: 2px solid #092653; /* Borda azul */
+    border: 2px solid #092653;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -53,23 +53,22 @@ main h2 {
   #info-qr {
     text-align: center;
     margin-top: 5px;
-    color: #FFFFFF; /* Texto branco */
+    color: #fdfdfd; 
   }
 
-/* Texto de instrução */
 #instrucao {
   margin-top: 10px;
-  color: #93C5FD; /* Azul claro */
+  color: #93C5FD; 
 }
 
 /* Rodapé */
 footer {
-  background-color: #1E3A8A; /* Azul mais escuro */
+  background-color: #1E3A8A; 
   text-align: center;
   padding: 10px;
 }
 
 footer p {
-  color: #FFFFFF;
+  color: #fdfdfd; 
   font-size: 0.9em;
 }
