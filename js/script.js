@@ -2,11 +2,11 @@
 function onScanSuccess(decodedText, decodedResult) {
     // Expressão regular para validar um ID de 5 dígitos numéricos
     const regex = /^\d{5}$/;
-    const idDetectado = decodedText.trim();
-  
+    const idDetectado = decodedText.trim();  // 5 dígitos vindos do QR
+
     if (regex.test(idDetectado)) {
       // Se o QR lido contém um ID válido de 5 dígitos, redireciona para o questionário
-      const questionarioUrl = "https://form.typeform.com/to/pgrLNjbs" + idDetectado;
+      const questionarioUrl = "https://form.typeform.com/to/pgrLNjbs#id=xxxxx" + idDetectado;
       window.location.href = questionarioUrl;
     } else {
       console.error("QR Code lido não contém um ID válido de 5 dígitos:", decodedText);
