@@ -68,6 +68,12 @@ h2 {
   z-index: -1;
 }
 
+@media screen and (max-width: 500px) {
+  .retangulos{
+    --tam-blocos: 50px;
+  }
+}
+
 .retangulos:first-child{
   top: 0;
   left: 0;
