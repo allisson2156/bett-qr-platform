@@ -43,16 +43,60 @@ header h1 {
   font-weight: 500;
 }
 
-main h2 {
+h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
-  color: #C7D2FE; 
+  color: white; 
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.retangulos{
+  --tam-blocos: 100px;
+  position: absolute;
+  height: var(--tam-blocos);
+  width: var(--tam-blocos);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.retangulos:first-child{
+  top: 0;
+  left: 0;
+}
+
+.retangulos:last-child{
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.retangulos div{
+  width: calc(var(--tam-blocos) / 2);
+  height: calc(var(--tam-blocos) / 2);
+}
+
+.retangulos div:nth-child(1){
+  background: var(--red);
+}
+
+.retangulos div:nth-child(2){
+  background: var(--yellow);
+}
+
+.retangulos div:nth-child(3){
+  background: var(--blue);
 }
 
 #info-titulo{
     text-align: center;
-    margin-top: 10px;
-    color: #fdfdfd; 
+    color: white; 
   }
 
 #reader {
@@ -67,14 +111,14 @@ main h2 {
 
   #info-qr {
     text-align: center;
-    margin-top: 5px;
-    color: #fdfdfd; 
+    margin-top: 1rem;
+    color: white; 
   }
 
-#instrucao {
+/* #instrucao {
   margin-top: 10px;
   color: #93C5FD; 
-}
+} */
 
 /* Rodapé */
 footer {
@@ -86,4 +130,8 @@ footer {
 footer p {
   color: #fdfdfd; 
   font-size: 0.9em;
+}
+
+footer img{
+  max-width: 100%;
 }
