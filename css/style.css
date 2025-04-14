@@ -9,30 +9,39 @@
 --red: #FF5856;
 --yellow: #FFD036;
 --blue: #3651AB;
+--black: #020202;
 }
 
 /* Corpo da página */
 body {
   font-family: "Bricolage Grotesque", sans-serif;
-  background-color: #0F172A;
+  background-color: var(--black);
   color: #fdfdfd; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+.wrapper{
+  height: 100vh;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* Cabeçalho */
 header {
-  background-color: #3B82F6;
+  background-color: white;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
   font-size: 2em;
-  color: #fdfdfd; 
+  color: var(--black);
+  font-weight: 500;
 }
-
 
 main h2 {
   font-size: 1.8em;
@@ -69,9 +78,9 @@ main h2 {
 
 /* Rodapé */
 footer {
-  background-color: #1E3A8A; 
+  background-color: white; 
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
 }
 
 footer p {
