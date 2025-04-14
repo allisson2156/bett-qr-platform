@@ -55,15 +55,17 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1rem;
 }
 
 .retangulos{
-  --tam-blocos: 100px;
+  --tam-blocos: 175px;
   position: absolute;
   height: var(--tam-blocos);
   width: var(--tam-blocos);
   display: flex;
   flex-wrap: wrap;
+  z-index: -1;
 }
 
 .retangulos:first-child{
