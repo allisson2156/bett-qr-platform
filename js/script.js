@@ -18,6 +18,16 @@ function onScanSuccess(decodedText, decodedResult) {
     console.warn(`Erro temporário na leitura do QR: ${error}`);
   }
   
+  //Largura do QR muda dependendo da largura da tela
+  let largTela  = window.innerWidth
+  let qrSize
+  if (largTela > 542){
+    qrSize = 500
+  } else{
+    qrSize = 300
+  }
+  document.getElementById("reader").style.width = qrSize + "px"
+
   // Inicia automaticamente o leitor de QR Code quando a página terminar de carregar
   window.addEventListener("DOMContentLoaded", () => {
     const html5QrCode = new Html5Qrcode("reader");
@@ -25,7 +35,7 @@ function onScanSuccess(decodedText, decodedResult) {
     // Configurações do leitor
     const configLeitor = {
       fps: 10,                // Frames por segundo
-      qrbox: { width: 300, height: 300 }, // Tamanho do quadrado de detecção
+      qrbox: { width: qrSize, height: qrSize }, // Tamanho do quadrado de detecção
     };
     const cameraConfig = { facingMode: "environment" }; // Tenta usar câmera traseira
   
