@@ -20,7 +20,7 @@ O projeto é composto por:
 
 - **Front-end**: HTML, CSS, JavaScript
 - **Leitor de QR Code**: [html5-qrcode](https://github.com/mebjas/html5-qrcode)
-- **Questionário**: [Typeform](https://www.typeform.com/)
+- **Questionário**: [Tally](https://tally.so/dashboard)
 - **Armazenamento das respostas**: Google Sheets
 - **Hospedagem**: GitHub Pages
 
