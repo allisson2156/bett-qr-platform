@@ -59,7 +59,7 @@ h2 {
 }
 
 .retangulos{
-  --tam-blocos: 175px;
+  --tam-blocos: 100px;
   position: absolute;
   height: var(--tam-blocos);
   width: var(--tam-blocos);
