@@ -6,7 +6,7 @@ function onScanSuccess(decodedText, decodedResult) {
 
     if (regex.test(idDetectado)) {
       // Se o QR lido contém um ID válido de 5 dígitos, redireciona para o questionário
-      const questionarioUrl = "https://form.typeform.com/to/pgrLNjbs#id=xxxxx" + idDetectado;
+      const questionarioUrl = "https://tally.so/r/nPPWo5?ID=" + encodeURIComponent(idDetectado);
       window.location.href = questionarioUrl;
     } else {
       console.error("QR Code lido não contém um ID válido de 5 dígitos:", decodedText);
