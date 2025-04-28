@@ -1,17 +1,40 @@
 // Função de callback para sucesso na leitura do QR Code
-function onScanSuccess(decodedText, decodedResult) {
-    // Expressão regular para validar um ID de 5 dígitos numéricos
-    const regex = /^\d{5}$/;
-    const idDetectado = decodedText.trim();  // 5 dígitos vindos do QR
+async function onScanSuccess(decodedText /* string */, decodedResult) {
+  let dados;
 
-    if (regex.test(idDetectado)) {
-      // Se o QR lido contém um ID válido de 5 dígitos, redireciona para o questionário
-      const questionarioUrl = "https://tally.so/r/nPPWo5?ID=" + encodeURIComponent(idDetectado);
-      window.location.href = questionarioUrl;
-    } else {
-      console.error("QR Code lido não contém um ID válido de 5 dígitos:", decodedText);
-    }
+  // 1. Tenta converter o texto lido em JSON
+  try {
+    dados = JSON.parse(decodedText.trim());
+  } catch (e) {
+    console.error("QR Code não contém um JSON válido:", decodedText);
+    return;                   // encerra se não for JSON
   }
+
+  // 2. Validação mínima do objeto
+  const esquemaValido =
+    typeof dados.id   === "number" &&
+    typeof dados.cid  === "number" &&
+    typeof dados.s    === "string" && dados.s.trim() !== "" &&
+    typeof dados.name === "string" && dados.name.trim() !== "";
+
+  if (!esquemaValido) {
+    console.error("JSON no QR está incompleto ou tem tipos incorretos:", dados);
+    return;
+  }
+
+  // 3. Monta a URL do Tally com todos os parâmetros como Hidden Fields
+  const params = new URLSearchParams({
+    id:   dados.id,
+    cid:  dados.cid,
+    s:    dados.s,
+    a:    dados.a,
+    name: dados.name
+  });
+
+  const questionarioUrl = `https://tally.so/r/nPPWo5?${params.toString()}`;
+  window.location.href = questionarioUrl;
+}
+
   
   // Função para caso haja falha de leitura em algum frame
   function onScanFailure(error) {
