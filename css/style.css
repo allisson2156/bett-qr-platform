@@ -95,11 +95,10 @@ h2 {
 }
 
 .retangulos div:nth-child(2){
-  background: var(--yellow);
-}
-
-.retangulos div:nth-child(3){
   background: var(--blue);
+}
+.retangulos div:nth-child(3){
+  background: var(--yellow);
 }
 
 #info-titulo{
